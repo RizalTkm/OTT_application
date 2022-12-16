@@ -9,9 +9,13 @@ class NewsAndHotScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   // BlocProvider.of<HotAndNewBloc>(context)
+    //   //     .add(const GetHotAndNewMovieData());
+    //   // BlocProvider.of<HotAndNewBloc>(context).add(const GetHotAndNewTvData());
+
     //   BlocProvider.of<HotAndNewBloc>(context)
     //       .add(const GetHotAndNewMovieData());
-    //   // BlocProvider.of<HotAndNewBloc>(context).add(const GetHotAndNewTvData());
+    //   BlocProvider.of<HotAndNewBloc>(context).add(const GetHotAndNewTvData());
     // });
 
     return DefaultTabController(

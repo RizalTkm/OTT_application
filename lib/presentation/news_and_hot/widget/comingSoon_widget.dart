@@ -38,7 +38,7 @@ class ComingSoonWidget extends StatelessWidget {
                 ),
               );
             } else if (state.isError) {
-              return const Text('Error while  getting data');
+              return const Center(child: Text('Error while  getting data'));
             } else if (state.comingSoondataList.isEmpty) {
               return const Center(child: Text('Data is empty'));
             } else {
@@ -158,16 +158,10 @@ class ComingSoonMainCArd extends StatelessWidget {
                 Spaces.kheight20,
                 Row(
                   children: [
-                    Flexible(
-                      child: SizedBox(
-                          width: 150,
-                          child: TextScroll(
-                            'Coming on $weekday     ',
-                            velocity:
-                                const Velocity(pixelsPerSecond: Offset(40, 0)),
-                            style: const TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
-                          )),
+                    Text(
+                      'Coming on $weekday',
+                      style: const TextStyle(
+                          fontSize: 17, fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
                   ],

@@ -76,7 +76,7 @@ class EveryoneWatchingMainCard extends StatelessWidget {
         Spaces.kheight10,
         Text(
           overview,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.grey,
           ),
           maxLines: 3,
