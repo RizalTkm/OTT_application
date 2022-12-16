@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_application/application/hot_and_new/hot_and_new_bloc.dart';
 import 'package:movie_application/constants/fonts/standard_font.dart';
 import 'package:movie_application/presentation/news_and_hot/widget/Everyone_watching_widget.dart';
 import 'package:movie_application/presentation/news_and_hot/widget/comingSoon_widget.dart';

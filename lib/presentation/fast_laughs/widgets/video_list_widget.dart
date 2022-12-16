@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_application/application/fast_laugh/fast_laugh_bloc.dart';
-import 'package:movie_application/constants/image_urls.dart';
 import 'package:movie_application/constants/spaces.dart';
 import 'package:movie_application/core/api_end_points.dart';
 import 'package:share_plus/share_plus.dart';
@@ -29,7 +26,7 @@ class VideoListItem extends StatelessWidget {
     return Stack(children: [
       VideoPlayerWIdget(
           videoUrl: videoUrls[index % videoUrls.length],
-          onstatechanged: (bool) {}),
+          onstatechanged: (_) {}),
       Align(
         alignment: Alignment.bottomRight,
         child: Padding(
@@ -224,7 +221,7 @@ class _VideoPlayerWIdgetState extends State<VideoPlayerWIdget> {
         Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: EdgeInsets.only(bottom: 50, left: 20),
+              padding: const EdgeInsets.only(bottom: 50, left: 20),
               child: CircleAvatar(
                   backgroundColor: Colors.black.withOpacity(.5),
                   child: videoPlayerController.value.volume != 0

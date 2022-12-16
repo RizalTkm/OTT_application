@@ -1,14 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:movie_application/constants/fonts/normal_bold_font.dart';
-import 'package:movie_application/constants/image_urls.dart';
+
 import 'package:movie_application/constants/spaces.dart';
-import 'package:text_scroll/text_scroll.dart';
 
 class MovieContainer extends StatelessWidget {
-  MovieContainer({super.key, required this.imageurl, required this.movieTitle});
+  const MovieContainer(
+      {super.key, required this.imageurl, required this.movieTitle});
 
   final String imageurl;
   final String movieTitle;
@@ -31,13 +27,13 @@ class MovieContainer extends StatelessWidget {
             width: 400,
             child: Text(
               movieTitle,
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
         ),
         IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.play_circle_outline_rounded,
               color: Colors.white,
               size: 30,

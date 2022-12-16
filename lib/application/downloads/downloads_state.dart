@@ -8,6 +8,7 @@ class DownloadsState with _$DownloadsState {
       required bool iserror}) = _DownloadsState;
 
   factory DownloadsState.initial() {
-    return DownloadsState(isloading: false, iserror: false, downloadimages: []);
+    return const DownloadsState(
+        isloading: false, iserror: false, downloadimages: []);
   }
 }

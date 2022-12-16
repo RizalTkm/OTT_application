@@ -3,13 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_application/application/search/search_bloc.dart';
 import 'package:movie_application/constants/fonts/mediumsized_font.dart';
-
-import 'package:movie_application/constants/image_urls.dart';
-
 import 'package:movie_application/constants/spaces.dart';
 import 'package:movie_application/core/api_end_points.dart';
 import 'package:movie_application/domain/core/debouncer/debouncer.dart';
-import 'package:movie_application/presentation/downloads/widgets/stacked_image.dart';
 import 'package:movie_application/presentation/search/widgets/maincard.dart';
 import 'package:movie_application/presentation/search/widgets/movie_container.dart';
 
@@ -21,7 +17,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      BlocProvider.of<SearchBloc>(context).add(initialize());
+      BlocProvider.of<SearchBloc>(context).add(const initialize());
     });
     return GestureDetector(
       onTap: () {
@@ -38,7 +34,7 @@ class SearchScreen extends StatelessWidget {
                   color: Colors.grey.withOpacity(.45),
                   borderRadius: BorderRadius.circular(10)),
               child: CupertinoSearchTextField(
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 onChanged: (value) {
                   if (value.isEmpty) {
                     return;
@@ -86,7 +82,7 @@ class TopSearchesWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      MediumSIzedFont(label: 'Top Searches'),
+      const MediumSIzedFont(label: 'Top Searches'),
       Expanded(child: BlocBuilder<SearchBloc, SearchState>(
         builder: (context, state) {
           final list = state.downloadResultList;
@@ -118,7 +114,7 @@ class MoviesAndTvWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        MediumSIzedFont(label: 'Movies & TV'),
+        const MediumSIzedFont(label: 'Movies & TV'),
         Expanded(child:
             BlocBuilder<SearchBloc, SearchState>(builder: (context, state) {
           final image = state.searchResultList;

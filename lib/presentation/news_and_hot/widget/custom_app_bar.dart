@@ -10,10 +10,10 @@ class CustomAppbarWidget extends StatelessWidget {
       backgroundColor: Colors.black,
       title: const StandardFont(label: 'New & Hot'),
       actions: [
-        IconButton(onPressed: () {}, icon: Icon(Icons.cast)),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.cast)),
         IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.square,
               color: Colors.blue,
             ))

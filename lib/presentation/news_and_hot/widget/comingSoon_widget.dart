@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:movie_application/application/hot_and_new/hot_and_new_bloc.dart';
 import 'package:movie_application/constants/fonts/grey_font.dart';
 import 'package:movie_application/constants/fonts/mediumsized_font.dart';
-import 'package:movie_application/constants/image_urls.dart';
+
 import 'package:movie_application/constants/spaces.dart';
 import 'package:movie_application/core/api_end_points.dart';
 import 'package:movie_application/presentation/news_and_hot/widget/iconButton_small.dart';
@@ -61,10 +60,6 @@ class ComingSoonWidget extends StatelessWidget {
                   final finalreleasedDate = formatedDate.split(',');
                   final releasedMonth = finalreleasedDate.first.substring(0, 3);
                   final releasedDay = finalreleasedDate.first.split(' ')[1];
-
-                  print(finalreleasedDate.toString());
-                  print(releasedDay);
-                  print(weekday);
 
                   return ComingSoonMainCArd(
                     imageurl: '$imageappendurl$backDropImage',
@@ -164,12 +159,13 @@ class ComingSoonMainCArd extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                      child: Container(
+                      child: SizedBox(
                           width: 150,
                           child: TextScroll(
                             'Coming on $weekday     ',
-                            velocity: Velocity(pixelsPerSecond: Offset(40, 0)),
-                            style: TextStyle(
+                            velocity:
+                                const Velocity(pixelsPerSecond: Offset(40, 0)),
+                            style: const TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           )),
                     ),
@@ -179,7 +175,7 @@ class ComingSoonMainCArd extends StatelessWidget {
                 Spaces.kheight10,
                 Text(
                   overview,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.grey,
                   ),
                   softWrap: false,

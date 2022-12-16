@@ -8,7 +8,7 @@ class NormalBoldFont extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       label,
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
     );
   }
 }

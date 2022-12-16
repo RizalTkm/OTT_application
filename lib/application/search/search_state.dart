@@ -9,7 +9,7 @@ class SearchState with _$SearchState {
     required bool iserror,
   }) = _SearchState;
 
-  factory SearchState.initial() => SearchState(
+  factory SearchState.initial() => const SearchState(
       searchResultList: [],
       downloadResultList: [],
       isloading: false,

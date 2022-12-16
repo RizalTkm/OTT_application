@@ -12,8 +12,8 @@ class Pageroutes {
   static final pages = [
     GetPage(
         name: PageNames.splashpage,
-        page: () => SplashScreen(),
-        binding: splashBindings()),
-    GetPage(name: PageNames.mainpage, page: () => MainPage())
+        page: () => const SplashScreen(),
+        binding: SplashBindings()),
+    GetPage(name: PageNames.mainpage, page: () => const MainPage())
   ];
 }

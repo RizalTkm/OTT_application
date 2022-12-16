@@ -23,12 +23,12 @@ class FastLaughsScreen extends StatelessWidget {
               ),
             );
           } else if (state.iserror) {
-            return Center(
+            return const Center(
               child: Text(
-                  'Error on loading videos n\ Pleas check the internet connection'),
+                  'Error on loading videos \n Pleas check the internet connection'),
             );
           } else if (state.vidoeListimage.isEmpty) {
-            Center(child: Text('Video List is empty'));
+            const Center(child: Text('Video List is empty'));
           }
           return PageView(
             scrollDirection: Axis.vertical,

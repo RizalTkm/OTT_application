@@ -1,15 +1,9 @@
-import 'dart:math';
-
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:movie_application/application/home/home_bloc.dart';
 import 'package:movie_application/constants/fonts/mediumsized_font.dart';
-
 import 'package:movie_application/constants/spaces.dart';
 import 'package:movie_application/core/api_end_points.dart';
 import 'package:movie_application/presentation/home/widgets/iconbuttonWidget.dart';

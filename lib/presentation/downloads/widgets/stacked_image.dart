@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:movie_application/constants/image_urls.dart';
 
 class StackedImagesWidget extends StatelessWidget {
   final String firstimageurl;
@@ -19,16 +16,16 @@ class StackedImagesWidget extends StatelessWidget {
       StackedContainer(
         imageUrl: firstimageurl,
         rotationAngle: .23,
-        margin: EdgeInsets.only(left: 130),
+        margin: const EdgeInsets.only(left: 130),
       ),
       StackedContainer(
         imageUrl: secondimageurl,
         rotationAngle: -0.23,
-        margin: EdgeInsets.only(right: 130),
+        margin: const EdgeInsets.only(right: 130),
       ),
       StackedContainer(
         imageUrl: thirdimageurl,
-        margin: EdgeInsets.only(top: 4),
+        margin: const EdgeInsets.only(top: 4),
       ),
     ]);
   }

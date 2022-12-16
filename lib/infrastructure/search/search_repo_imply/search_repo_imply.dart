@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:movie_application/core/api_end_points.dart';
@@ -20,7 +18,7 @@ class SearchRepoImply implements SearchRepository {
       if (response.statusCode == 200 || response.statusCode == 201) {
         final responsedata = SearchResponse.fromJson(response.data);
 
-        log(response.data.toString());
+        // log(response.data.toString());
         return Right(responsedata);
       } else {
         return const Left(MainFailure.serverfailure());

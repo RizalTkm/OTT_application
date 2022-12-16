@@ -1,6 +1,3 @@
-import 'dart:developer';
-// import 'dart:math';
-
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
@@ -21,10 +18,7 @@ class DownloadsRepoImply implements DownloadsRepository {
       if (response.statusCode == 200 || response.statusCode == 201) {
         final downloadsList = DownloadsModelData.fromJson(response.data);
 
-        // log(downloadsList.toString());
-        // log(response.data['results'].toString());
-
-        log(downloadsList.results.toString());
+        // log(downloadsList.results.toString());
         return Right(downloadsList);
       } else {
         return const Left(MainFailure.serverfailure());

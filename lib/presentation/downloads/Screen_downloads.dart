@@ -17,7 +17,7 @@ class DownloadsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      BlocProvider.of<DownloadsBloc>(context).add(GetDownloadImages());
+      BlocProvider.of<DownloadsBloc>(context).add(const GetDownloadImages());
     });
     return Scaffold(
         appBar: const PreferredSize(
@@ -48,7 +48,7 @@ class DownloadsScreen extends StatelessWidget {
                   label:
                       "We'ill download a personalised selection of  \n movies and shows for you, so there's\nalways something to watch on your\ndevice"),
               Spaces.kheight10,
-              Container(
+              SizedBox(
                 height: 350,
                 width: 350,
                 child: Stack(
@@ -64,7 +64,7 @@ class DownloadsScreen extends StatelessWidget {
 
                         if (state.isloading) {
                           return const Center(
-                            child: const CircularProgressIndicator(
+                            child: CircularProgressIndicator(
                               strokeWidth: 2,
                             ),
                           );
@@ -90,14 +90,15 @@ class DownloadsScreen extends StatelessWidget {
                 ),
               ),
               Spaces.kheight10,
-              Container(
+              SizedBox(
                 height: 40,
                 width: 300,
-                child: ElevatedButton(onPressed: () {}, child: Text('Set Up')),
+                child: ElevatedButton(
+                    onPressed: () {}, child: const Text('Set Up')),
               ),
               Spaces.kheight20,
               Container(
-                margin: EdgeInsets.only(top: 10, bottom: 20),
+                margin: const EdgeInsets.only(top: 10, bottom: 20),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(5)),
@@ -105,7 +106,7 @@ class DownloadsScreen extends StatelessWidget {
                 width: 250,
                 child: TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'See What You Can Download',
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),

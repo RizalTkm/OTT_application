@@ -7,7 +7,7 @@ class FastLaughState with _$FastLaughState {
       required bool isloading,
       required bool iserror}) = _Initial;
 
-  factory FastLaughState.initital() => FastLaughState(
+  factory FastLaughState.initital() => const FastLaughState(
         vidoeListimage: [],
         isloading: true,
         iserror: false,

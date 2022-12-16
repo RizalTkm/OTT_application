@@ -38,7 +38,7 @@ class MovieApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         initialRoute: PageNames.splashpage,
-        initialBinding: splashBindings(),
+        initialBinding: SplashBindings(),
         getPages: Pageroutes.pages,
       ),
     );

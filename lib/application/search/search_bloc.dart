@@ -19,14 +19,14 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       : super(SearchState.initial()) {
     //idlestate
     on<initialize>((event, emit) async {
-      emit(SearchState(
+      emit(const SearchState(
           searchResultList: [],
           downloadResultList: [],
           isloading: true,
           iserror: false));
       final result = await downloadsRepository.getdownloadsImages();
       final data = result.fold((MainFailure l) {
-        return SearchState(
+        return const SearchState(
             searchResultList: [],
             downloadResultList: [],
             isloading: false,
@@ -44,7 +44,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     //searchstate
 
     on<searchMovies>((event, emit) async {
-      emit(SearchState(
+      emit(const SearchState(
           searchResultList: [],
           downloadResultList: [],
           isloading: true,
@@ -52,7 +52,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
       final result =
           await searchRepository.searchMovies(moviequery: event.moviename);
       final data = result.fold((MainFailure l) {
-        return SearchState(
+        return const SearchState(
             searchResultList: [],
             downloadResultList: [],
             isloading: false,
